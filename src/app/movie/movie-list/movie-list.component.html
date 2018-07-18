@@ -1,0 +1,25 @@
+<p>
+  movie-list works!
+</p>
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-3" *ngFor="let movie of movies">
+      <div class="card mb-3 box-shadow">
+        <img class="card-img-top" alt={{movie.name}} style="height: 300px; width: 100%; display: block;" src="{{movie.imagePath}}">
+        <div class="card-body">
+          <p class="card-text">Some short description about the movie will come here</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary" (click)="onMovieSelected(movie.id)">View</button>
+              <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Book</button> -->
+            </div>
+            <small class="text-muted">9 mins</small>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+    
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<p>
+  Currently This Movie is shown in below theaters, Please select a theater to view the show timings
+</p>
+<div class="row mb-2">      
+  <div class="col-md-6">
+      <div class="list-group">        
+        <button type="button" #theaterList class="list-group-item list-group-item-action" *ngFor="let theater of theaters" value="{{theater.name}}" (click)="onTheaterSelect(theater)">{{theater.name}}</button>
+        <!-- <a href="#" class="list-group-item list-group-item-action" *ngFor="let theater of theaters">{{theater.name}}</a> -->
+        <!-- <li class="list-group-item" *ngFor="let theater of theaters">{{theater.name}}</li>           -->
+      </div>            
+  </div>
+  <div class="col-md-6">
+      <div class="list-group" #theaterShows *ngFor="let show of shows">
+          <a href="#" class="list-group-item list-group-item-action">{{show.showTime}}</a>
+      </div>        
+  </div>
+</div>
+
